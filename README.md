@@ -30,9 +30,13 @@ Here throwing the "async error" works as expected. A non-fatal crash is reported
 
 Here throwing the "async error" has the issue. A fatal crash is caused, closing the app and the reported crash on instabug points to Instabug SDK itself. From the crash report, this is the thread that fails:
 
-From the crash report, this is thread that fails:
+From the crash report, this is the cause and thread that fails:
 
 ```
+data:text/text;charset=utf-8,
+# Cause: -[NSNull length]: unrecognized selector sent to instance 0x1e3b3ba80
+# Reported at: 2025-03-04 15:24:34 UTC
+
 Thread 7 Queue 16: com.apple.root.user-initiated-qos (concurrent) [Crashed]:
 
 0    CoreFoundation                           0x1804b9100     ___exceptionPreprocess
